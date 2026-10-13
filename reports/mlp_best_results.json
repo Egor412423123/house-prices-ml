@@ -1,0 +1,19 @@
+{
+    "model": "MLPRegressor",
+    "CV_RMSE": 0.11692831341688403,
+    "optimizer_params": {
+        "solver": "sgd",
+        "sgd_lr": 0.008706020878304856,
+        "sgd_momentum": 0.9078968939922066,
+        "sgd_batch_size": 16
+    },
+    "architecture_params": {
+        "n_layers": 3,
+        "n_units_layer_0": 128,
+        "n_units_layer_1": 32,
+        "n_units_layer_2": 64,
+        "alpha": 0.06850247937294286
+    },
+    "total_trials": 87,
+    "successful_trials": 81
+}

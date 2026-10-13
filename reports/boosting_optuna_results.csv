@@ -1,0 +1,7 @@
+model,CV_RMSE,best_params
+adaboost,0.17267310109481473,"{'n_estimators': 100, 'learning_rate': 0.6842616869538886, 'loss': 'exponential'}"
+gradient_boosting,0.12006636636716321,"{'n_estimators': 600, 'learning_rate': 0.04380865686809633, 'max_depth': 3, 'min_samples_leaf': 1, 'subsample': 0.65063922439042}"
+hist_gradient_boosting,0.12443639841655965,"{'max_iter': 600, 'learning_rate': 0.03923929588360717, 'max_leaf_nodes': 7, 'max_depth': 7, 'min_samples_leaf': 26, 'l2_regularization': 0.00034031349001648666}"
+xgboost,0.12204398264743946,"{'n_estimators': 700, 'learning_rate': 0.0562642485471285, 'max_depth': 2, 'min_child_weight': 10, 'subsample': 0.6971422176731967, 'colsample_bytree': 0.8878631741140323, 'reg_lambda': 0.060022668388025356}"
+lightgbm,0.12065246161396208,"{'n_estimators': 400, 'learning_rate': 0.07134019312682033, 'num_leaves': 7, 'max_depth': 11, 'min_child_samples': 12, 'subsample': 0.6112834494839546, 'subsample_freq': 1, 'colsample_bytree': 0.9919212619755272, 'reg_lambda': 2.54516149973009}"
+catboost,0.11651062644875054,"{'iterations': 800, 'learning_rate': 0.030378394787383568, 'depth': 5, 'l2_leaf_reg': 1.2674195871272842, 'random_strength': 3.1152867419036707}"

@@ -1,0 +1,103 @@
+{
+    "model": "stacking_d",
+    "CV_RMSE": 0.12133480526312967,
+    "base_models": [
+        "elastic_net",
+        "random_forest",
+        "lightgbm",
+        "catboost"
+    ],
+    "base_estimators": {
+        "elastic_net": {
+            "class": "Pipeline",
+            "params": {
+                "memory": null,
+                "steps": [
+                    [
+                        "preprocessing",
+                        "Pipeline(steps=[('prepare',\n                 FunctionTransformer(func=<function prepare_feature_frame at 0x0000018481060860>)),\n                ('columns',\n                 ColumnTransformer(transformers=[('numeric',\n                                                  Pipeline(steps=[('imputer',\n                                                                   SimpleImputer(add_indicator=True,\n                                                                                 strategy='median')),\n                                                                  ('scaler',\n                                                                   StandardScaler())]),\n                                                  ['LotFrontage', 'LotArea',\n                                                   'OverallQual', 'OverallCond',\n                                                   'YearBuilt', 'YearRemodAdd',...\n                                                   'Street', 'LotShape',\n                                                   'LandContour', 'Utilities',\n                                                   'LotConfig', 'LandSlope',\n                                                   'Neighborhood', 'Condition1',\n                                                   'Condition2', 'BldgType',\n                                                   'HouseStyle', 'RoofStyle',\n                                                   'RoofMatl', 'Exterior1st',\n                                                   'Exterior2nd', 'ExterQual',\n                                                   'ExterCond', 'Foundation',\n                                                   'Heating', 'HeatingQC',\n                                                   'CentralAir', 'Electrical',\n                                                   'KitchenQual', 'Functional',\n                                                   'PavedDrive', 'MoSold',\n                                                   'SaleType',\n                                                   'SaleCondition'])]))])"
+                    ],
+                    [
+                        "model",
+                        "ElasticNet(max_iter=10000, random_state=42)"
+                    ]
+                ],
+                "transform_input": null,
+                "verbose": false
+            }
+        },
+        "random_forest": {
+            "class": "Pipeline",
+            "params": {
+                "memory": null,
+                "steps": [
+                    [
+                        "preprocessing",
+                        "Pipeline(steps=[('prepare',\n                 FunctionTransformer(func=<function prepare_feature_frame at 0x0000018481060860>)),\n                ('columns',\n                 ColumnTransformer(transformers=[('numeric',\n                                                  Pipeline(steps=[('imputer',\n                                                                   SimpleImputer(add_indicator=True,\n                                                                                 strategy='median'))]),\n                                                  ['LotFrontage', 'LotArea',\n                                                   'OverallQual', 'OverallCond',\n                                                   'YearBuilt', 'YearRemodAdd',\n                                                   'MasVnrArea', 'BsmtFinSF1',\n                                                   'B...\n                                                   'Street', 'LotShape',\n                                                   'LandContour', 'Utilities',\n                                                   'LotConfig', 'LandSlope',\n                                                   'Neighborhood', 'Condition1',\n                                                   'Condition2', 'BldgType',\n                                                   'HouseStyle', 'RoofStyle',\n                                                   'RoofMatl', 'Exterior1st',\n                                                   'Exterior2nd', 'ExterQual',\n                                                   'ExterCond', 'Foundation',\n                                                   'Heating', 'HeatingQC',\n                                                   'CentralAir', 'Electrical',\n                                                   'KitchenQual', 'Functional',\n                                                   'PavedDrive', 'MoSold',\n                                                   'SaleType',\n                                                   'SaleCondition'])]))])"
+                    ],
+                    [
+                        "model",
+                        "RandomForestRegressor(n_estimators=200, n_jobs=1, random_state=42)"
+                    ]
+                ],
+                "transform_input": null,
+                "verbose": false
+            }
+        },
+        "lightgbm": {
+            "class": "Pipeline",
+            "params": {
+                "memory": null,
+                "steps": [
+                    [
+                        "preprocessing",
+                        "Pipeline(steps=[('prepare',\n                 FunctionTransformer(func=<function prepare_feature_frame at 0x0000018481060860>)),\n                ('columns',\n                 ColumnTransformer(transformers=[('numeric',\n                                                  Pipeline(steps=[('imputer',\n                                                                   SimpleImputer(add_indicator=True,\n                                                                                 strategy='median'))]),\n                                                  ['LotFrontage', 'LotArea',\n                                                   'OverallQual', 'OverallCond',\n                                                   'YearBuilt', 'YearRemodAdd',\n                                                   'MasVnrArea', 'BsmtFinSF1',\n                                                   'B...\n                                                   'Street', 'LotShape',\n                                                   'LandContour', 'Utilities',\n                                                   'LotConfig', 'LandSlope',\n                                                   'Neighborhood', 'Condition1',\n                                                   'Condition2', 'BldgType',\n                                                   'HouseStyle', 'RoofStyle',\n                                                   'RoofMatl', 'Exterior1st',\n                                                   'Exterior2nd', 'ExterQual',\n                                                   'ExterCond', 'Foundation',\n                                                   'Heating', 'HeatingQC',\n                                                   'CentralAir', 'Electrical',\n                                                   'KitchenQual', 'Functional',\n                                                   'PavedDrive', 'MoSold',\n                                                   'SaleType',\n                                                   'SaleCondition'])]))])"
+                    ],
+                    [
+                        "model",
+                        "LGBMRegressor(learning_rate=0.05, n_estimators=300, n_jobs=1, num_leaves=15,\n              random_state=42, verbosity=-1)"
+                    ]
+                ],
+                "transform_input": null,
+                "verbose": false
+            }
+        },
+        "catboost": {
+            "class": "Pipeline",
+            "params": {
+                "memory": null,
+                "steps": [
+                    [
+                        "preprocessing",
+                        "Pipeline(steps=[('prepare',\n                 FunctionTransformer(func=<function prepare_feature_frame at 0x0000018481060860>)),\n                ('columns',\n                 ColumnTransformer(transformers=[('numeric',\n                                                  Pipeline(steps=[('imputer',\n                                                                   SimpleImputer(add_indicator=True,\n                                                                                 strategy='median'))]),\n                                                  ['LotFrontage', 'LotArea',\n                                                   'OverallQual', 'OverallCond',\n                                                   'YearBuilt', 'YearRemodAdd',\n                                                   'MasVnrArea', 'BsmtFinSF1',\n                                                   'B...\n                                                   'Street', 'LotShape',\n                                                   'LandContour', 'Utilities',\n                                                   'LotConfig', 'LandSlope',\n                                                   'Neighborhood', 'Condition1',\n                                                   'Condition2', 'BldgType',\n                                                   'HouseStyle', 'RoofStyle',\n                                                   'RoofMatl', 'Exterior1st',\n                                                   'Exterior2nd', 'ExterQual',\n                                                   'ExterCond', 'Foundation',\n                                                   'Heating', 'HeatingQC',\n                                                   'CentralAir', 'Electrical',\n                                                   'KitchenQual', 'Functional',\n                                                   'PavedDrive', 'MoSold',\n                                                   'SaleType',\n                                                   'SaleCondition'])]))])"
+                    ],
+                    [
+                        "to_dense",
+                        "FunctionTransformer(accept_sparse=True,\n                    func=<function _to_dense at 0x0000018485F63560>)"
+                    ],
+                    [
+                        "model",
+                        "CatBoostRegressor(allow_writing_files=False, depth=6, iterations=300, learning_rate=0.05, loss_function='RMSE', random_seed=42, thread_count=1, verbose=False)"
+                    ]
+                ],
+                "transform_input": null,
+                "verbose": false
+            }
+        }
+    },
+    "final_estimator": {
+        "class": "Ridge",
+        "params": {
+            "alpha": 1.0,
+            "copy_X": true,
+            "fit_intercept": true,
+            "max_iter": null,
+            "positive": false,
+            "random_state": null,
+            "solver": "auto",
+            "tol": 0.0001
+        }
+    },
+    "stacking_cv": 5,
+    "passthrough": false
+}

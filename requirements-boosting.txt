@@ -1,0 +1,4 @@
+# Optional gradient-boosting libraries used by 03_modeling.ipynb
+xgboost==3.4.1
+lightgbm==4.7.0
+catboost==1.2.10
